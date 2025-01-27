@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* body {
+    background-color: #f4f4f4;
+    color: #333;
+    color: white;
+} 
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Prend toute la hauteur de la vue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-image: url('images/andy-holmes.jpg'); /* Remplace par le chemin de l'image */
+    background-size: cover; /* Couvre toute la zone */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; /* Cache les débordements */
+}
+
+.back-img {
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-image: url('images/andy-holmes.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; */
+    /* z-index: -1; Pour s'assurer qu'il est en arrière-plan */
+    /* position: absolute;
+    left: 0;
+    bottom: 0; */
+    /* width: 200px;
+    height: auto; */
+    /*filter: blur(5px);*/ /* Applique le flou */
+    /* z-index: -1; */
+
+
+
+    /* position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1; */
+
+
+
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    /* width: 100%; */
+    height: 100%;
+    /* object-fit: cover; Couvre toute la zone */
+    clip-path: polygon(0 0, 30% 0, 30% 30%, 0 30%); /* Découpe la partie en haut à gauche */
+    z-index: -1;
+}
+
+.cover{
+    position: fixed;
+    inset: 0 0 0 0;
+    background-color: #526bd82d;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    height: 70px;
+    /* background-color: rgba(255, 255, 255, 0.121); */
+    /* -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px); */
+    /* box-shadow: 0 0 15px #72a1de98; */
+    z-index: 999;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    /* gap: 0.5rem; */
+}
+
+.left img{
+    width: 40px;
+    margin: 0 15px;
+    border-radius: 50%;
+}
+
+header ul{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;  /* C'est ici qui lui permet au nav de prendre la partie gauche */
+    padding: 15px 15px;
+    /* border-radius: 50px; */
+    /* background-color: rgba(0,0,69,0.326); */
+    /* -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); */
+    /* box-shadow: 0 0 10px #72a1de63; */
+}
+
+header ul li{
+    list-style: none;
+    
+}
+header ul a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    position: relative;
+    font-size: 18px;
+}
+
+header ul a:hover{
+    border-radius: 70px;
+    padding: 5px;
+    background-color: rgba(252, 91, 169, 0.783);
+    color: black;
+    cursor: pointer;
+    z-index: 10; /* Assure que l'élément est au-dessus */
+    position: relative;
+    transition: 0.3s;  /*0.5*/
+}
+
+
+.box-icons{
+    display: flex;
+    gap: 40px;
+    margin-left: 220px; /* Ajuste cette valeur pour les pousser plus ou moins */
+}
+
+.box-icons p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgb(191, 122, 255);
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 10; /* Assure que l'élément est au-dessus */
+    position: relative;
+    transition: 0.3s;  /*0.5*/
+}
+
+.box-icons p:hover{
+    background-color: rgb(191, 122, 255);
+    color: black;
+    box-shadow: 0 0 15px rgb(191, 122, 255);
+    /* border: 2px solid black; */
+}
+.box-icons i {
+    font-size: 30px; /* Augmente ou diminue la taille ici */
+    color:white
+    transition: 0.3s ease; /* Transition pour un effet fluide */
+}
+
+.box-icons p:hover i {
+    color: black; /* Change la couleur au survol */
+}
+
+
+.hero{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-info{
+    position: absolute;
+    left: 5%;
+    /* margin-top: 150px; */
+}
+
+/* .hero-info div{
+    color: #72a1de;
+    padding: 8px 5px;
+    border-radius: 50px;
+    border: 1px solid #72a1de94;
+    width: 260px;  
+    background-color: #2200493d;
+    box-shadow: 0 0 5px #72a1de84;
+} */
+
+.hero-info h1{
+    font-size: 60px;
+    max-width: 600px;
+    font-weight: 700;
+    line-height: 60px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.hero-info p{
+    max-width: 550px;
+    line-height: 25px;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+.hero-info button{
+    color: white;
+    padding: 15px 35px;
+    border-radius: 10px;
+    border: 1px solid #72a1de81;
+    background-color: #2200493d;
+    box-shadow: 0 0 5px #72a1de81;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-info button:hover{
+    box-shadow: 0 0 15px #72a1de81;
+}
+
+/* Gradient Animation */
+.gradient{
+    background: linear-gradient(to right, #01acd3, #882ac6, #6600c5, #9802a0, #2a46ff, #0099ff, #008ead);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+}
+
+@keyframes animate-gradient {
+    to{
+        background-position: 200%;
+    }
+}
+
+/* .pic {
+    position: absolute;
+    right: 5%;
+    height: 400px;
+    border-radius: 50%;
+    box-shadow: 
+        0 0 30px 10px rgba(255, 187, 155, 0.7), 
+        0 0 60px 20px rgba(0, 217, 255, 0.7), 
+        0 0 90px 30px rgba(247, 33, 165, 0.7); 
+    animation: glow 3s infinite; 
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 
+            0 0 30px 10px rgba(255, 187, 155, 0.7),
+            0 0 60px 20px rgba(0, 217, 255, 0.7), 
+            0 0 90px 30px rgba(247, 33, 165, 0.7); 
+    }
+    50% {
+        box-shadow: 
+            0 0 30px 10px rgba(255, 187, 155, 0.7), 
+            0 0 60px 20px rgba(0, 217, 255, 0.7), 
+            0 0 90px 30px rgba(247, 33, 165, 0.7);
+    }
+    100% {
+        box-shadow: 
+            0 0 30px 10px rgba(255, 187, 155, 0.7),
+            0 0 60px 20px rgba(0, 217, 255, 0.7), 
+            0 0 90px 30px rgba(247, 33, 165, 0.7);
+    }
+} */
+
+.pic {
+    position: absolute;
+    right: 5%;
+    height: 400px;
+    border-radius: 50%;
+    box-shadow: 
+        0 0 30px 10px rgba(255, 187, 155, 0.7), 
+        0 0 60px 20px rgba(0, 217, 255, 0.7), 
+        0 0 90px 30px rgba(247, 33, 165, 0.7);
+    animation: glow 3s infinite; /* Animation infinie */
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 
+            0 0 20px 5px rgba(255, 187, 155, 0.5), 
+            0 0 40px 15px rgba(0, 217, 255, 0.5), 
+            0 0 60px 25px rgba(247, 33, 165, 0.5);
+    }
+    50% {
+        box-shadow: 
+            0 0 40px 15px rgba(255, 187, 155, 0.9), 
+            0 0 80px 30px rgba(0, 217, 255, 0.9), 
+            0 0 120px 45px rgba(247, 33, 165, 0.9);
+    }
+    100% {
+        box-shadow: 
+            0 0 20px 5px rgba(255, 187, 155, 0.5), 
+            0 0 40px 15px rgba(0, 217, 255, 0.5), 
+            0 0 60px 25px rgba(247, 33, 165, 0.5);
+    }
+}
+
+
+/* .about-section{
+    
+    margin-bottom: 5000px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+   
+} */
+
